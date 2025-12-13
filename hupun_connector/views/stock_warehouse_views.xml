@@ -5,10 +5,10 @@
         <field name="model">stock.warehouse</field>
         <field name="inherit_id" ref="stock.view_warehouse"/>
         <field name="arch" type="xml">
-            <xpath expr="//header" position="inside">
+            <!-- <xpath expr="//header" position="inside">
                 <button name="action_push_storage_to_hupun" string="Push to Hupun" type="object" class="btn-secondary" invisible="is_hupun_synced"/>
                 <button name="action_pull_storage_from_hupun" string="Link from Hupun" type="object" class="btn-secondary" invisible="is_hupun_synced"/>
-            </xpath>
+            </xpath> -->
             <xpath expr="//notebook" position="inside">
                 <page string="Hupun Integration" name="hupun_integration">
                     <group>

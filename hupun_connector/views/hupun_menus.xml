@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_hupun_root" name="Hupun" web_icon="hupun_connector,static/description/icon.png"/>
+
+    <!-- Synchronization -->
+    <menuitem id="menu_hupun_sync" name="Synchronization" parent="menu_hupun_root" sequence="10"/>
+    <menuitem id="menu_hupun_sync_wizard" name="Sync Wizard" parent="menu_hupun_sync" action="action_hupun_sync"/>
+
+    <!-- Operations -->
+    <menuitem id="menu_hupun_operations" name="Operations" parent="menu_hupun_root" sequence="20"/>
+    <menuitem id="menu_hupun_sale_order" name="Sale Orders" parent="menu_hupun_operations" action="sale.action_orders"/>
+    <menuitem id="menu_hupun_purchase_order" name="Purchase Orders" parent="menu_hupun_operations" action="purchase.purchase_rfq"/>
+    <menuitem id="menu_hupun_stock_picking" name="Transfers" parent="menu_hupun_operations" action="stock.action_picking_tree_all"/>
+    <menuitem id="menu_hupun_platform_bill" name="Platform Bills" parent="menu_hupun_operations" action="action_hupun_platform_bill"/>
+
+    <!-- Master Data -->
+    <menuitem id="menu_hupun_master_data" name="Master Data" parent="menu_hupun_root" sequence="30"/>
+    <menuitem id="menu_hupun_product_template" name="Products" parent="menu_hupun_master_data" action="product.product_template_action"/>
+    <menuitem id="menu_hupun_res_partner" name="Customers" parent="menu_hupun_master_data" action="base.action_partner_form"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_hupun_config" name="Configuration" parent="menu_hupun_root" sequence="100"/>
+    
+</odoo>

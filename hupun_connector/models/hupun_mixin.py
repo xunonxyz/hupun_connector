@@ -2,6 +2,9 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
 class HupunMixin(models.AbstractModel):
+    """
+    Mixin to integrate with Hupun ERP system.
+    """
     _name = 'hupun.mixin'
     _description = 'Hupun Integration Mixin'
 

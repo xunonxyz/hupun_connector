@@ -20,6 +20,8 @@
         'views/stock_picking_views.xml',
         'views/purchase_order_views.xml',
         'views/hupun_platform_bill_views.xml',
+        'views/hupun_sync_views.xml',
+        'views/hupun_menus.xml',
     ],
     'installable': True,
     'application': False,

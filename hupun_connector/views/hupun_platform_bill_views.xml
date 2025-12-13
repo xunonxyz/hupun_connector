@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_hupun_platform_bill_tree" model="ir.ui.view">
-        <field name="name">hupun.platform.bill.tree</field>
+    <record id="view_hupun_platform_bill_list" model="ir.ui.view">
+        <field name="name">hupun.platform.bill.list</field>
         <field name="model">hupun.platform.bill</field>
         <field name="arch" type="xml">
-            <tree string="Hupun Platform Bills">
+            <list string="Hupun Platform Bills">
                 <field name="bill_no"/>
                 <field name="bill_date"/>
                 <field name="shop_name"/>
                 <field name="bill_type"/>
                 <field name="amount"/>
                 <field name="currency"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -49,7 +49,7 @@
     <record id="action_hupun_platform_bill" model="ir.actions.act_window">
         <field name="name">Hupun Platform Bills</field>
         <field name="res_model">hupun.platform.bill</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Fetch platform bills from Hupun.
