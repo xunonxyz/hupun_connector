@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_hupun" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.hupun</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_push_supplier_to_hupun" type="object" class="oe_stat_button" icon="fa-cloud-upload" string="Push to Hupun" invisible="hupun_supplier_id"/>
+                <button name="action_update_supplier_in_hupun" type="object" class="oe_stat_button" icon="fa-refresh" string="Update Hupun" invisible="not hupun_supplier_id"/>
+                <button name="action_pull_supplier_from_hupun" type="object" class="oe_stat_button" icon="fa-cloud-download" string="Pull from Hupun" invisible="hupun_supplier_id"/>
+            </xpath>
+            <xpath expr="//group[@name='misc']" position="inside">
+                <group string="Hupun Integration" name="hupun_integration">
+                    <field name="hupun_supplier_id"/>
+                    <field name="is_hupun_supplier"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hupun_package_line,hupun.package.line,model_hupun_package_line,base.group_user,1,1,1,1

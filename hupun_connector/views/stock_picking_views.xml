@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_hupun" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.hupun</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_query_hupun_batch" string="Query Hupun Batch" type="object" invisible="not hupun_bill_code"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Hupun Info" name="hupun_info">
+                    <group>
+                        <field name="hupun_bill_code"/>
+                        <field name="hupun_bill_type"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
