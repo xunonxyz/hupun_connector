@@ -8,9 +8,13 @@
             <xpath expr="//form" position="inside">
                 <app string="Hupun Connector" name="hupun_connector">
                     <block title="Hupun API Settings" name="hupun_api_settings">
-                        <setting string="API Credentials" help="Configure your Hupun API credentials.">
+                        <setting string="App Key" help="The App Key provided by Hupun.">
                             <field name="hupun_app_key"/>
+                        </setting>
+                        <setting string="App Secret" help="The App Secret provided by Hupun.">
                             <field name="hupun_app_secret" password="True"/>
+                        </setting>
+                        <setting string="API Base URL" help="The API Base URL.">
                             <field name="hupun_api_base_url"/>
                             <div class="mt16">
                                 <button name="action_test_hupun_connection" type="object" string="Test Connection" class="btn-primary"/>

@@ -21,6 +21,7 @@
         'views/purchase_order_views.xml',
         'views/hupun_platform_bill_views.xml',
         'views/hupun_sync_views.xml',
+        'views/hupun_sync_log_views.xml',
         'views/hupun_menus.xml',
     ],
     'installable': True,

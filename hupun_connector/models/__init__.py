@@ -11,3 +11,4 @@ from . import stock_picking
 from . import purchase_order
 from . import hupun_platform_bill
 from . import hupun_sync
+from . import hupun_sync_log
