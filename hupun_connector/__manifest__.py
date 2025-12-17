@@ -10,17 +10,14 @@
     'author': 'Your Name',
     'depends': ['base', 'sale_management', 'stock', 'purchase'],
     'data': [
+        'security/hupun_security.xml',
         'security/ir.model.access.csv',
+
+        'data/ir_cron_data.xml',
+
         'views/res_config_settings_views.xml',
         'views/product_views.xml',
-        'views/product_category_views.xml',
         'views/sale_order_views.xml',
-        'views/res_partner_views.xml',
-        'views/stock_warehouse_views.xml',
-        'views/stock_picking_views.xml',
-        'views/purchase_order_views.xml',
-        'views/hupun_platform_bill_views.xml',
-        'views/hupun_sync_views.xml',
         'views/hupun_sync_log_views.xml',
         'views/hupun_menus.xml',
     ],

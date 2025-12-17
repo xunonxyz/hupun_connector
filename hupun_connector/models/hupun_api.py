@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import json
 import logging
 import time
@@ -89,6 +91,20 @@ class HupunAPI(models.AbstractModel):
         """Add storage/warehouse (erp/base/storage/add)"""
         return self.make_request(hupun_endpoints.STORAGE_ADD, params)
 
+    def distr_com_query(self, params=None):
+        """Query distribution company (erp/base/distr/com/page/get)"""
+        return self.make_request(hupun_endpoints.DISTR_COM_QUERY, params)
+    
+    # /erp/base/shop/offline/add
+    def shop_offline_add(self, params):
+        """Add offline shop (erp/base/shop/offline/add)"""
+        return self.make_request('erp/base/shop/offline/add', params)
+    
+    # /erp/base/custom/offline/add
+    def custom_offline_add(self, params):
+        """Add offline customer (erp/base/custom/offline/add)"""
+        return self.make_request('erp/base/custom/offline/add', params)
+
     # --- Inventory API (库存接口) ---
     def inventory_query(self, params=None):
         """Query inventory (erp/stock/query)"""
@@ -101,10 +117,71 @@ class HupunAPI(models.AbstractModel):
     def batch_query_by_bill(self, params):
         """Query batch info by bill code (erp/batch/billbatch)"""
         return self.make_request(hupun_endpoints.BATCH_QUERY_BY_BILL, params)
+    
+    #  ---订单 --
+    # /erp/opentrade/list/trades
+    def order_list_trades(self, params=None):
+        """List open trades/orders (erp/opentrade/list/trades)"""
+        return self.make_request('erp/opentrade/list/trades', params)
+    
+    # /erp/opentrade/modify/address
+    def order_modify_address(self, params):
+        """Modify order address (erp/opentrade/modify/address)"""
+        return self.make_request('erp/opentrade/modify/address', params)
+    
+    # /erp/opentrade/modify/express
+    def order_modify_express(self, params):
+        """Modify order express info (erp/opentrade/modify/express)"""
+        return self.make_request('erp/opentrade/modify/express', params)
+    
+    # /erp/opentrade/modify/mark
+    def order_modify_mark(self, params):
+        """Modify order mark/note (erp/opentrade/modify/mark)"""
+        return self.make_request('erp/opentrade/modify/mark', params)
+    
+    # /erp/opentrade/modify/remark
+    def order_modify_remark(self, params):
+        """Modify order remark (erp/opentrade/modify/remark)"""
+        return self.make_request('erp/opentrade/modify/remark', params)
+    
+    # /erp/opentrade/send/trades
+    def order_send_trades(self, params):
+        """Send trades/orders (erp/opentrade/send/trades)"""
+        return self.make_request('erp/opentrade/send/trades', params)
+    
+    # /erp/opentrade/trade/commit
+    def order_trade_commit(self, params):
+        """Commit trade/order (erp/opentrade/trade/commit)"""
+        return self.make_request('erp/opentrade/trade/commit', params)
+    
+    # /erp/opentrade/trade/exception/commit
+    def order_trade_exception_commit(self, params):
+        """Commit trade/order exception (erp/opentrade/trade/exception/commit)"""
+        return self.make_request('erp/opentrade/trade/exception/commit', params)
+    
+    # /erp/sale/stock/out/add
+    def sale_stock_out_add(self, params):
+        """Add sale stock out (erp/sale/stock/out/add)"""
+        return self.make_request('erp/sale/stock/out/add', params)\
+    
+    # /erp/sale/stock/out/query
+    def sale_stock_out_query(self, params=None):
+        """Query sale stock out (erp/sale/stock/out/query)"""
+        return self.make_request('erp/sale/stock/out/query', params)
+    
+    # /erp/logistic/trace/list
+    def logistic_trace_list(self, params=None):
+        """List logistic trace (erp/logistic/trace/list)"""
+        return self.make_request('erp/logistic/trace/list', params)
+    
+    # /erp/opentrade/trade/commit/by_goods
+    def order_trade_commit_by_goods(self, params):
+        """Commit trade/order by goods (erp/opentrade/trade/commit/by_goods)"""
+        return self.make_request('erp/opentrade/trade/commit/by_goods', params)
 
     # --- Goods API (商品接口) ---
     def goods_query(self, params=None):
-        """Query goods information (erp/goods/query)"""
+        """Query goods information (/erp/goods/spec/open/query/goodswithspeclist)"""
         return self.make_request(hupun_endpoints.GOODS_QUERY, params)
 
     def goods_add(self, params):
@@ -166,9 +243,4 @@ class HupunAPI(models.AbstractModel):
     def refund_query(self, params=None):
         """Query refund/return orders (erp/refund/query)"""
         return self.make_request(hupun_endpoints.REFUND_QUERY, params)
-    
-    # --- Warehouse API (仓库接口) ---
-    def warehouse_query(self, params=None):
-        """Query warehouse information (erp/base/storage/query)"""
-        return self.make_request(hupun_endpoints.WAREHOUSE_QUERY, params)
 

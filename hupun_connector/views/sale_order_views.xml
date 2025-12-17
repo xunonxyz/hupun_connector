@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_order_form_inherit_hupun" model="ir.ui.view">
-        <field name="name">sale.order.form.inherit.hupun</field>
+
+    <record id="view_order_tree_inherit_hupun" model="ir.ui.view">
+        <field name="name">sale.order.tree.inherit.hupun</field>
         <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//header" position="inside">
-                <button name="action_sync_hupun_status" string="Check Hupun Status" type="object" invisible="not hupun_id"/>
-            </xpath>
-            <xpath expr="//notebook" position="inside">
-                <page string="Hupun Info" name="hupun_info">
-                    <group>
-                        <field name="hupun_id"/>
-                        <field name="hupun_status"/>
-                    </group>
-                </page>
+            <xpath expr="//list/header" position="inside">
+                <button name="action_sync_hupun_orders" display="always" string="Sync Hupun" type="object"/>
             </xpath>
         </field>
     </record>
+
 </odoo>

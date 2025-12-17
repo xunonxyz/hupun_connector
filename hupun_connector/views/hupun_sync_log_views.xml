@@ -68,9 +68,4 @@
             </field>
         </record>
 
-        <menuitem id="menu_hupun_sync_log" 
-        name="Sync Logs" 
-        parent="menu_hupun_sync" 
-        action="action_hupun_sync_log" 
-        sequence="20"/>
 </odoo>

@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hupun_package_line,hupun.package.line,model_hupun_package_line,base.group_user,1,1,1,1
-access_hupun_sync_log,hupun.sync.log,model_hupun_sync_log,base.group_user,1,1,1,1
+access_hupun_sync_log_user,hupun.sync.log user,model_hupun_sync_log,group_hupun_user,1,0,0,0
+access_hupun_sync_log_manager,hupun.sync.log manager,model_hupun_sync_log,group_hupun_manager,1,1,1,1
