@@ -6,7 +6,7 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.sale_order_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//list/header" position="inside">
+            <xpath expr="//tree/header" position="inside">
                 <button name="action_sync_hupun_orders" display="always" string="Sync Hupun" type="object"/>
             </xpath>
         </field>
